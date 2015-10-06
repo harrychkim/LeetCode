@@ -1,10 +1,23 @@
 public class TwoSumSolution {
 	int[] input;
 	int target;
-	//Overloaded Constructors
+
 	TwoSumSolution(int[] numbers, int sum) {
 		input = numbers;
 		target = sum;
+	}
+	
+	public static void main(String[] args) {
+		int[] numList = {1,2,3,4,5,6,7};
+		int sum = 8;
+		TwoSumSolution t = new TwoSumSolution(numList, sum);
+		int[] solution = t.getSolution();
+		if (solution[0] <1 | solution[1] <1) {
+			System.out.println("No Solution Found");
+		} else {
+			System.out.println("index1 = " + solution[0]);
+			System.out.println("index2 = " + solution[1]);
+		}
 	}
 	
 	public int[] getSolution() {
@@ -20,19 +33,5 @@ public class TwoSumSolution {
 			}
 		}
 		return solution;
-	}
-	
-	
-	public static void main(String[] args) {
-		int[] numList = {1,2,3,4,5,6,7};
-		int sum = 8;
-		TwoSumSolution t = new TwoSumSolution(numList, sum);
-		int[] solution = t.getSolution();
-		if (solution[0] <1 | solution[1] <1) {
-			System.out.println("No Solution Found");
-		} else {
-			System.out.println("index1 = " + solution[0]);
-			System.out.println("index2 = " + solution[1]);
-		}
 	}
 }
